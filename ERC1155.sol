@@ -68,6 +68,11 @@ contract LWCA is ERC1155, Ownable, ERC1155Pausable, ERC1155Supply {
         price = newPrice * 10**6;
     }
 
+    function showPrice() external view returns(uint)
+    {
+        return price;
+    }
+
     // The following functions are overrides required by Solidity.
 
     function _update(address from, address to, uint256[] memory ids, uint256[] memory values)
