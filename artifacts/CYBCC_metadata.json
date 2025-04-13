@@ -401,6 +401,25 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "isWhitelistedAddress",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "launchBlock",
 				"outputs": [
@@ -615,6 +634,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "whitelistedAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"stateMutability": "payable",
 				"type": "receive"
 			}
@@ -774,11 +806,11 @@
 			]
 		},
 		"CYBCC.sol": {
-			"keccak256": "0x05c03d86b4ad8f5d0133da7031fcf9d7145a28b22bdfb45ed396b15b0c663e3f",
+			"keccak256": "0xfea59bd4ca23136a8d25aae1bdea09d44b82104a202cb409290486fc706c95dd",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://eb92297ac17dfbca205ae3c9e6d6e3fc69a9d1341b452f3f3b283958c256cfe4",
-				"dweb:/ipfs/QmSRTFtsHELWGPaSvSvMZH1QCL72SvPhVSLVfNFWMGqTVu"
+				"bzz-raw://5ae85f0984821d43e1baa91630ea2dd4929100ad10d74449bf0db16ce1d398a2",
+				"dweb:/ipfs/QmermfUqRACab3T3GcMeB9g8x3qUBWvkBeZxn6WugkXJfn"
 			]
 		}
 	},

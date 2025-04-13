@@ -53,6 +53,9 @@ contract CYBCC is ERC20 {
         _isExcludedFromFee[_marketingAccount] = true;
         _isExcludedFromFee[_developmentAccount] = true;
         _isExcludedFromFee[address(this)] = true;
+        isWhitelisted[owner()] = true;
+        isWhitelisted[_marketingAccount] = true;
+        isWhitelisted[_developmentAccount] = true;
         _rOwned[_owner] = _rTotal;
         _mint(msg.sender, _rTotal);
     }
@@ -200,6 +203,15 @@ contract CYBCC is ERC20 {
                 break;
             }
         }
+    }
+
+    function isWhitelistedAddress(address account) public view returns (bool) {
+        return isWhitelisted[account];
+    }
+
+    function whitelistedAddress(address account) public onlyOwner {
+        require(!isWhitelisted[account], "Address is already whitelisted");
+        isWhitelisted[account] = true;
     }
 
     function openTrading() external onlyOwner {
