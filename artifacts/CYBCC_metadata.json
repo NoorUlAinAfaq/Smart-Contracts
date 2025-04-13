@@ -240,6 +240,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_pairAddress",
+						"type": "address"
+					}
+				],
+				"name": "changePairAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "decimals",
 				"outputs": [
@@ -338,19 +351,6 @@
 						"type": "address"
 					}
 				],
-				"name": "includeInFee",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "account",
-						"type": "address"
-					}
-				],
 				"name": "isExcluded",
 				"outputs": [
 					{
@@ -382,6 +382,38 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "isWhitelisted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "launchBlock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "name",
 				"outputs": [
@@ -396,7 +428,27 @@
 			},
 			{
 				"inputs": [],
+				"name": "openTrading",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "pairAddress",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -491,6 +543,19 @@
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tradingOpen",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -709,11 +774,11 @@
 			]
 		},
 		"CYBCC.sol": {
-			"keccak256": "0xbbb7323f8ad199b2dff307f0aa9741972385fa19370f50c4ece769dac9ac234e",
+			"keccak256": "0x05c03d86b4ad8f5d0133da7031fcf9d7145a28b22bdfb45ed396b15b0c663e3f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2c5b85bf531765b94c8d9edebb044108d3c7aa83001e01f196c9fecf10d00dce",
-				"dweb:/ipfs/QmNiDHUGMHrceAXFZRkmYjan3qyeRTiYQFAVhGm1oJwc6f"
+				"bzz-raw://eb92297ac17dfbca205ae3c9e6d6e3fc69a9d1341b452f3f3b283958c256cfe4",
+				"dweb:/ipfs/QmSRTFtsHELWGPaSvSvMZH1QCL72SvPhVSLVfNFWMGqTVu"
 			]
 		}
 	},

@@ -7,6 +7,7 @@ contract CYBCC is ERC20 {
     mapping(address => uint256) private _rOwned;
     mapping(address => uint256) private _tOwned;
     mapping(address => bool) private _isExcludedFromFee;
+    mapping(address => bool) public isWhitelisted;
 
     mapping(address => bool) private _isExcluded;
     address[] private _excluded;
@@ -27,7 +28,12 @@ contract CYBCC is ERC20 {
     address private _marketingAccount;
     address private _developmentAccount;
 
-    uint private maxWalletAmount = 10000000 * 10**uint256(_decimals);
+    address public pairAddress;
+
+    uint256 private maxWalletAmount = 10000000 * 10**uint256(_decimals);
+
+    uint256 public launchBlock;
+    bool public tradingOpen = false;
 
     constructor() ERC20("CYBERCATSCOIN", "CYBCC") {
         _decimals = 18;
@@ -114,10 +120,6 @@ contract CYBCC is ERC20 {
         _isExcludedFromFee[account] = true;
     }
 
-    function includeInFee(address account) public onlyOwner {
-        _isExcludedFromFee[account] = false;
-    }
-
     function changeMarketingAccount(address newFeeAccount) public onlyOwner {
         require(
             newFeeAccount != address(0),
@@ -132,6 +134,10 @@ contract CYBCC is ERC20 {
             "zero address can not be the FeeAccount"
         );
         _developmentAccount = newFeeAccount;
+    }
+
+    function changePairAddress(address _pairAddress) public onlyOwner {
+        pairAddress = _pairAddress;
     }
 
     function reflect(uint256 tAmount) public {
@@ -196,11 +202,26 @@ contract CYBCC is ERC20 {
         }
     }
 
+    function openTrading() external onlyOwner {
+        tradingOpen = true;
+        launchBlock = block.number;
+    }
+
+    modifier launchProtection(address from, address to) {
+        if (!tradingOpen) {
+            require(isWhitelisted[to], "Trading not yet enabled");
+        } else if (block.number <= launchBlock + 3) {
+            // Allow only whitelisted addresses for 3 blocks
+            require(isWhitelisted[to], "Launch protection: not whitelisted");
+        }
+        _;
+    }
+
     function _transfer(
         address sender,
         address recipient,
         uint256 amount
-    ) internal virtual override {
+    ) internal virtual override launchProtection(sender, recipient) {
         require(sender != address(0), "ERC20: transfer from the zero address");
         require(recipient != address(0), "ERC20: transfer to the zero address");
         uint256 senderBalance = balanceOf(sender);
@@ -209,15 +230,16 @@ contract CYBCC is ERC20 {
             "ERC20: transfer amount exceeds balance"
         );
 
-        if(!isExcludedFromFee(recipient))
-        {
-
-        require(balanceOf(recipient)+amount <= maxWalletAmount, "Whale detected!!");
+        if (!isExcludedFromFee(recipient)) {
+            require(
+                balanceOf(recipient) + amount <= maxWalletAmount,
+                "Whale detected!!"
+            );
         }
-        bool takeFee = true;
+        bool takeFee;
 
-        if (_isExcludedFromFee[sender] || _isExcludedFromFee[recipient]) {
-            takeFee = false;
+        if (sender == pairAddress || recipient == pairAddress) {
+            takeFee = true;
         }
 
         _tokenTransfer(sender, recipient, amount, takeFee);
