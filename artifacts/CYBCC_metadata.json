@@ -806,11 +806,11 @@
 			]
 		},
 		"CYBCC.sol": {
-			"keccak256": "0xfea59bd4ca23136a8d25aae1bdea09d44b82104a202cb409290486fc706c95dd",
+			"keccak256": "0x39357e70d0a9b1d37dbee07d23a94162d5f1572b31540850de6493bde2837ae8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5ae85f0984821d43e1baa91630ea2dd4929100ad10d74449bf0db16ce1d398a2",
-				"dweb:/ipfs/QmermfUqRACab3T3GcMeB9g8x3qUBWvkBeZxn6WugkXJfn"
+				"bzz-raw://4a7ec73b1c34db553634e025dab71f2e8202f0ddf8cb4dbe7bd81752e0deeaee",
+				"dweb:/ipfs/QmQucFcSiBmSjnDWWDp7op15rasDPHCADNDNMB1EsmAScm"
 			]
 		}
 	},

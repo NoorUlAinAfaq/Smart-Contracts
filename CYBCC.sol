@@ -30,7 +30,7 @@ contract CYBCC is ERC20 {
 
     address public pairAddress;
 
-    uint256 private maxWalletAmount = 10000000 * 10**uint256(_decimals);
+    uint256 private maxWalletAmount;
 
     uint256 public launchBlock;
     bool public tradingOpen = false;
@@ -47,6 +47,9 @@ contract CYBCC is ERC20 {
         _previousTaxFee = _taxFee;
 
         _marketingAccount = _owner;
+        _developmentAccount = _owner;
+
+        maxWalletAmount = 10000000 * 10**uint256(_decimals);
 
         //exclude owner, feeaccount and this contract from fee
         _isExcludedFromFee[owner()] = true;
@@ -141,6 +144,7 @@ contract CYBCC is ERC20 {
 
     function changePairAddress(address _pairAddress) public onlyOwner {
         pairAddress = _pairAddress;
+        isWhitelisted[pairAddress] = true;
     }
 
     function reflect(uint256 tAmount) public {
@@ -221,7 +225,7 @@ contract CYBCC is ERC20 {
 
     modifier launchProtection(address from, address to) {
         if (!tradingOpen) {
-            require(isWhitelisted[to], "Trading not yet enabled");
+            require(isWhitelisted[from], "Trading not yet enabled");
         } else if (block.number <= launchBlock + 3) {
             // Allow only whitelisted addresses for 3 blocks
             require(isWhitelisted[to], "Launch protection: not whitelisted");
@@ -253,6 +257,8 @@ contract CYBCC is ERC20 {
         if (sender == pairAddress || recipient == pairAddress) {
             takeFee = true;
         }
+
+        if(isExcludedFromFee(sender)){takeFee = false;}
 
         _tokenTransfer(sender, recipient, amount, takeFee);
     }
