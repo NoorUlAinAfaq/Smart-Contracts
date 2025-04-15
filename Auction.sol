@@ -3,7 +3,9 @@ INSTRUCTIONS TO EXECUTE:
 1-Deploy an ERC20 token.
 2-Deploy ERC20Auction.
 3-Approve ERC20Auction from ERC20
-4-Execute buyTokens on ERC20Auction.(Every buyToken user must have to approve the contract to use the tokens).BuyTokens on ERC20Auction will transfer the tokens to the buyer.
+4-List ERC20 token with desired parameters with listTokens function.(Every listTokens user must have to approve
+  the contract to use the tokens).listTokens on ERC20Auction will transfer the tokens to the contract.
+4-Execute buyTokens on ERC20Auction.
 */
 
 // SPDX-License-Identifier: MIT
