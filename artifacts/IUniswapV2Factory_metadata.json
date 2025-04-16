@@ -1,0 +1,70 @@
+{
+	"compiler": {
+		"version": "0.8.29+commit.ab55807c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenA",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "tokenB",
+						"type": "address"
+					}
+				],
+				"name": "createPair",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "pair",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Diana.sol": "IUniswapV2Factory"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Diana.sol": {
+			"keccak256": "0x7e9c407bd56cb9329953a9434b75096579e9c6133a8419633ed7cc01be48ece5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4d3b1426ccd2b2e8ab73d8a749963dc8aaf2e2d1f34944ed2eb4915089a5f6ca",
+				"dweb:/ipfs/Qmda5F5jUJsNPFrFMQnFaGJjaxAgsXxuHqdsV84KYFLxf4"
+			]
+		}
+	},
+	"version": 1
+}
