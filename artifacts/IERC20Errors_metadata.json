@@ -160,7 +160,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Diana.sol": "IERC20Errors"
+			"CYBCC_flattened.sol": "IERC20Errors"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -174,12 +174,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"Diana.sol": {
-			"keccak256": "0x7e9c407bd56cb9329953a9434b75096579e9c6133a8419633ed7cc01be48ece5",
+		"CYBCC_flattened.sol": {
+			"keccak256": "0xddea760c4b0693403c860cb4387595348873ee541a9b85ee7e9d7d25505e62d9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4d3b1426ccd2b2e8ab73d8a749963dc8aaf2e2d1f34944ed2eb4915089a5f6ca",
-				"dweb:/ipfs/Qmda5F5jUJsNPFrFMQnFaGJjaxAgsXxuHqdsV84KYFLxf4"
+				"bzz-raw://7cb7a4e08973f67e54c61fd3d612314e09af30288c0844437953f42a9511c752",
+				"dweb:/ipfs/Qmcs2eevnxmbFHLHoo2ajfEcTANDjPCTfcryxzwoN53dpU"
 			]
 		}
 	},
