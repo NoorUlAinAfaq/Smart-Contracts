@@ -185,7 +185,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"CYBCC_flattened.sol": "IERC1155Errors"
+			"CYBCC.sol": "IERC1155Errors"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -199,12 +199,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"CYBCC_flattened.sol": {
-			"keccak256": "0xddea760c4b0693403c860cb4387595348873ee541a9b85ee7e9d7d25505e62d9",
+		"CYBCC.sol": {
+			"keccak256": "0xd59db55e8f5ab48ccc3bc5abd76b37a5235e97156a858953ffb491c3f1cf765c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7cb7a4e08973f67e54c61fd3d612314e09af30288c0844437953f42a9511c752",
-				"dweb:/ipfs/Qmcs2eevnxmbFHLHoo2ajfEcTANDjPCTfcryxzwoN53dpU"
+				"bzz-raw://f992b78017acc05091993b67e6527282227c9fde2a3cb5d2034c0bf3261ed9d7",
+				"dweb:/ipfs/QmTVBjnhK2bLNtKXRZ2CzUe4q8LYb6GE49fX98DEVDdYoD"
 			]
 		}
 	},

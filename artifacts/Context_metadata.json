@@ -19,7 +19,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"CYBCC_flattened.sol": "Context"
+			"CYBCC.sol": "Context"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -33,12 +33,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"CYBCC_flattened.sol": {
-			"keccak256": "0xddea760c4b0693403c860cb4387595348873ee541a9b85ee7e9d7d25505e62d9",
+		"CYBCC.sol": {
+			"keccak256": "0x15beb4dd7b2c55b01dc698f28f98e4d8032196b453f2d8ceedbc1bec0a0fbdef",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7cb7a4e08973f67e54c61fd3d612314e09af30288c0844437953f42a9511c752",
-				"dweb:/ipfs/Qmcs2eevnxmbFHLHoo2ajfEcTANDjPCTfcryxzwoN53dpU"
+				"bzz-raw://c57e0a572cadc8b6712d0b19283b8b280d278627f12092c14481a718460a9417",
+				"dweb:/ipfs/QmRvbTXMhffThMBNeUEAAYU2CK29M9W3r5m9qSzXVXnDHP"
 			]
 		}
 	},
