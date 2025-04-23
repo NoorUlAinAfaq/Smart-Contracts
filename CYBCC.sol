@@ -609,7 +609,7 @@ contract CYBCC is ERC20 {
 
         _previousTaxFee = _taxFee;
 
-        _marketingAndDevelopmentAccount = _owner;
+        _marketingAndDevelopmentAccount = _owner; //change this wallet address
 
         maxWalletAmount = 2 * (_tTotal / 100);
 
@@ -792,11 +792,13 @@ contract CYBCC is ERC20 {
             "ERC20: transfer amount exceeds balance"
         );
 
-        if (sender != owner() && antiWhale) {
+        if (sender != owner() && sender != getMarketingAndDevelopmentAccount() && antiWhale) {
+
             require(
                 balanceOf(recipient) + amount <= maxWalletAmount,
                 "Whale detected!!"
             );
+
         }
 
         bool takeFee;

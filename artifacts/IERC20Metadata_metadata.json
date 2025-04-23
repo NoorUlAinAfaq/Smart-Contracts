@@ -293,11 +293,11 @@
 	},
 	"sources": {
 		"CYBCC.sol": {
-			"keccak256": "0x15beb4dd7b2c55b01dc698f28f98e4d8032196b453f2d8ceedbc1bec0a0fbdef",
+			"keccak256": "0x76ab820705cd95af8869863fc882b2cdf2b14e0981efa8a2035be4c6a9be9b5f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c57e0a572cadc8b6712d0b19283b8b280d278627f12092c14481a718460a9417",
-				"dweb:/ipfs/QmRvbTXMhffThMBNeUEAAYU2CK29M9W3r5m9qSzXVXnDHP"
+				"bzz-raw://0917c444a71bf70b36c5bc6d48d52a49e78555be24ae49e36ee93bf4e76e4626",
+				"dweb:/ipfs/QmUL2dwkG2Qx9H2mbBd9dujjfSyTMjvUKkUEoGda6RbD4n"
 			]
 		}
 	},
