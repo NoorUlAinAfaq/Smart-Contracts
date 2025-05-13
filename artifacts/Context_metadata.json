@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.29+commit.ab55807c"
+		"version": "0.8.20+commit.a1b79de6"
 	},
 	"language": "Solidity",
 	"output": {
@@ -21,7 +21,7 @@
 		"compilationTarget": {
 			"CYBCC.sol": "Context"
 		},
-		"evmVersion": "cancun",
+		"evmVersion": "shanghai",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
